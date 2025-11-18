@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+.container {
+    width: 350px;
+    background: #fff;
+    padding: 25px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 15px;
+}
+
+.radio-group {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.radio-group label {
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    background: #1a73e8;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #155ab3;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+.analytics-btn {
+    margin-top: 25px;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.analytics-btn:hover {
+    background: #111;
+}
+
+.analytics-panel {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-left: 5px solid #1a73e8;
+    border-radius: 6px;
+}
+
+.hidden {
+    display: none;
+}
