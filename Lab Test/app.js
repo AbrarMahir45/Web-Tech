@@ -2,68 +2,64 @@
 let registration = [];
 let showAnalytics= false;
 
+function data(event){
+    event.preventDefault(); // stop page from reloading
 
-
-
-function data(){
     var name= document.getElementById("fullName").value;
     var email= document.getElementById("email").value;
     var company= document.getElementById("company").value;
-    var attendance= document.getElementById("input[name='attendance']:checked").value;
+    var attendanceElem = document.querySelector("input[name='attendance']:checked");
 
-    if(name===""||email===""||company===""){
-         
-         return false;
-   }   
-    else if(name.length<6||name.length>100){
+    if (name === "" || email === "") {
+        alert("Please fill in required fields (name and email).");
+        return;
+    }
+    else if(name.length < 6 || name.length > 100){
         alert("Name must be between 6 and 100 characters");
-        return false;
+        return;
     }
-    else if(name===""){
-        alert("Fillup the name field!");
-    }
-    else if(!email.includes("@")||!email.includes(".")){
+    else if(!email.includes("@") || !email.includes(".")){
         alert("Please enter a valid professional email address.");
-        return false;
+        return;
     }
-    else if(company.length>100){
-        return false;
+    else if (company.length > 100){
+        alert("Company name cannot exceed 100 characters");
+        return;
     }
-    else if(!attendance){
+    else if (!attendanceElem) {
         alert("Please select your attendance type.");
-        return false;
+        return;
     }
+
+    const attendance = attendanceElem.value;
+
     registration.push({
         fullName: name,
         email: email,
         company: company,
-        attendance: attendance.value
+        attendance: attendance
     });
-    
+
     alert("Registration Successful!");
 
     document.getElementById("form-box").reset();
 
     AnalyticsUpdate();
-
-    return false;
-
 }
-document.getElementById("analyticsBtn").addEventListener("click", function () {
 
-    const panel = document.getElementById("analyticsPanel");
-
-    if (!showAnalytics) {
-        panel.style.display = "block";
-        this.innerText = "Hide Event Analytics";
-        showAnalytics = true;
-    } else {
+ function toggleAnalytics() {
+        let panel = document.getElementById("analyticsPanel");
+        let btn = document.getElementById("analytics-btn");
+        if (panel.style.display === "none") {
+            panel.style.display = "block";
+            btn.innerHTML = "Hide Event Analytics";
+     } else {
         panel.style.display = "none";
-        this.innerText = "Show Event Analytics";
-        showAnalytics = false;
+        btn.innerHTML = "Show Event Analytics";
+ 
+        }
+ 
     }
-});
-
 
 function AnalyticsUpdate () {
     let total = registration.length;
@@ -82,3 +78,4 @@ function AnalyticsUpdate () {
     document.getElementById("virtualCount").innerText = virtual;
     document.getElementById("inPersonCount").innerText = inperson;
 }
+ 

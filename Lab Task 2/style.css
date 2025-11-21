@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+.container {
+    padding: 20px;
+    background-color: white;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: lightgrey;
+        }
+#asterisk{
+    color: red;
+}
+
+body {
+    margin-left: 20%;
+    margin-right: 20%;
+        }
+h2{
+    margin-top: 10px;
+}
+#header1{
+    margin-top: -20;
+}
+#header1,#header2{
+    font-size: small;
+}
+#header2{
+    display: inline-flex;
+    gap: 20px;
+    margin-top: 8px;
+}
+#donation{
+    font-weight: bold;
+}
+.main-heading{
+    color: red;
+}
+#table1{
+    margin-left: 60px;
+    
+    
+}
+#table2{
+    margin-left: 60px;
+    padding-left: 32px;
+}
+#table3{
+    margin-left: 60px;
+}
+#label{
+    font-weight: bold;
+    margin-left: 8px;
+    text-align: right;
+}
+#form3-label{
+    font-weight: bold;
+    padding-left: 165px;
+}
+#light-label{
+    font-weight: lighter;
+    margin-top: -6px;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#dropdown{
+    margin-left: 5px;
+}
+#radiobutton{
+    margin-left: 5px;
+}
+#textbox{
+    margin-left: 5px;
+    padding: 0 40 0 40;
+}
+#commentbox{
+    padding: 0 115 55 0;
+}
+#comment-label{
+    margin: 0 0 0 0;
+    padding: ;
+}
+#mini-textbox{
+    margin: 0 2px 0 5px;
+    padding: 2px 35px;
+    width: 2px;
+}
+#checkbox{
+   margin-left: 6px;
+}
+#form3-sec1{
+    margin-left: -63px;
+}
+#donation-txt{
+    margin-left: 20px ;
+}

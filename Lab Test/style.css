@@ -5,6 +5,7 @@ body {
 
 .container {
     width: 350px;
+    height: 100vh;
     background: #fff;
     padding: 25px;
     margin: auto;
@@ -65,7 +66,7 @@ input[type="email"] {
     font-size: 13px;
 }
 
-.analytics-btn {
+#analytics-btn {
     margin-top: 25px;
     width: 100%;
     background: #333;
@@ -77,18 +78,17 @@ input[type="email"] {
     cursor: pointer;
 }
 
-.analytics-btn:hover {
+#analytics-btn:hover {
     background: #111;
 }
 
-.analytics-panel {
+#analyticsPanel {
     margin-top: 25px;
     padding: 20px;
     background: #f8f8f8;
     border-left: 5px solid #1a73e8;
     border-radius: 6px;
+    
 }
 
-.hidden {
-    display: none;
-}
+

@@ -11,7 +11,7 @@
        <div class="container">
         <h1>Global Tech Connect </h1>
 
-        <form id="form-box" onsubmit="data()">
+        <form id="form-box">
            
             <label for="fullName">Full Name </label>
             <input type="text" id="fullName" placeholder="Enter your full name">
@@ -40,20 +40,21 @@
           
          
 
-            <button type="submit" class="submit-btn" >Register Now</button>
+            <button type="submit" class="submit-btn" onclick="data(event)" >Register Now</button>
         </form>
 
         
-        <button id="analyticsBtn" class="analytics-btn">Show Event Analytics</button>
+       <button id="analytics-btn" onclick="toggleAnalytics()">Show Event Analytics</button>
 
         
-        <div id="analyticsPanel" class="analytics-panel hidden">
-            <h2>Event Analytics</h2>
+        <div id="analyticsPanel">
+            <h3>Event Analytics</h3>
             <p><strong>Total Registrants:</strong> <span id="totalRegistrants">0</span></p>
             <p><strong>Virtual:</strong> <span id="virtualCount">0</span></p>
             <p><strong>In-Person:</strong> <span id="inPersonCount">0</span></p>
         </div>
     </div>
 
-</body>
-</html>
+        <script src="app.js"></script>
+    </body>
+    </html>
